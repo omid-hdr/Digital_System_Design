@@ -32,11 +32,9 @@ just need to compile and simulate in modelsim
 Using image is required.
 
 ## Related Links
-Some links related to your project come here.
  - https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/Ankit-kumar65/Elevator-Control-System-using-Verilog&ved=2ahUKEwiMkqb0qv-GAxUsg_0HHZjkBBgQFnoECBUQAQ&usg=AOvVaw07GmkHo4PIgQfwTOoeqVtP
- - https://github.com/Engineer-Ayesha-Shafique/Generalized-Elevator-Control-System-Using-System-Verilog)
+ - https://github.com/Engineer-Ayesha-Shafique/Generalized-Elevator-Control-System-Using-System-Verilog
 
 ## Authors
-Authors and their github link come here.
 - [Omid](https://github.com/omid-hdr)
 
