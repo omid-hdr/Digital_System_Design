@@ -4,8 +4,8 @@ module elevator_controller (
     input [4:0] buttons_ex,       // request from out
     input [4:0] buttons_in,       // request from in
     input [4:0] floor_cur,          // Current floor
-    output reg direction,               // Motor Direction signal : 1 ->  up, 0 -> down
-    output reg motor                    // Motor movement : 1 -> move, 0 -> stop 
+    output reg direction,               // Move Direction signal : 1 ->  up, 0 -> down
+    output reg motor                    // Motor movement : 1 -> motor, 0 -> stop 
 );
 
     // local variable
@@ -20,7 +20,7 @@ module elevator_controller (
 
     // initial
     initial begin
-        {move, direction} = STOP;
+        {motor, direction} = STOP;
         requests = {5{1'b0}};
     end
 
@@ -50,9 +50,9 @@ module elevator_controller (
     // always for the control logic
     always @(negedge clk or posedge rst) begin
         if (rst)
-            {move, direction} <= STOP;
+            {motor, direction} <= STOP;
         else begin
-            case ({move, direction})
+            case ({motor, direction})
                 STOP: begin
                     if (requests != {5{1'b0}}) begin
                         if (queue.size() > 0 && new_target)begin
@@ -60,9 +60,9 @@ module elevator_controller (
                             new_target = 0;
                         end
                         if (target > floor_cur)
-                            {move, direction} <= UP_going;
+                            {motor, direction} <= UP_going;
                         else if (target < floor_cur)
-                            {move, direction} <= DOWN_going;
+                            {motor, direction} <= DOWN_going;
                     end
                     if (target == floor_cur) begin
                             requests[floor_cur] <= 1'b0;
@@ -72,32 +72,32 @@ module elevator_controller (
 
                 DOWN_going: begin
                     if (0 == floor_cur) begin
-                        {move, direction} <= STOP;
+                        {motor, direction} <= STOP;
                     end
                     else begin
                         if (requests[floor_cur] == 1'b1) begin
-                            {move, direction} <= STOP;
+                            {motor, direction} <= STOP;
                             requests[floor_cur] <= 1'b0;
                         end
                         if (target == floor_cur) begin
                             new_target = 1;
-                            {move, direction} = STOP;
+                            {motor, direction} = STOP;
                         end
                     end
                 end
 
                 UP_going: begin
                     if (5 == floor_cur) begin
-                        {move, direction} <= STOP;
+                        {motor, direction} <= STOP;
                     end
                     else begin
                         if (requests[floor_cur] == 1'b1) begin
-                            {move, direction} <= STOP;
+                            {motor, direction} <= STOP;
                             requests[floor_cur] <= 1'b0;
                         end
                         if (target == floor_cur) begin
                             new_target = 1;
-                            {move, direction} = STOP;
+                            {motor, direction} = STOP;
                         end
                     end 
                 end
@@ -114,7 +114,7 @@ module elevator_controller (
         else begin
             for (i = 0; i < 5 ; i= i+1) begin
                 if (buttons_in[i] | buttons_ex[i] == 1'b1) begin
-                    case ({move, direction})
+                    case ({motor, direction})
                         STOP: begin
                             if (target > floor_cur) begin
                                 if (i < floor_cur)
