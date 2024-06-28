@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,29 @@ z2
 !i10f 100
 cModel Technology
 dC:/intelFPGA/20.1
+vBalaBar
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1719598137
+!i10b 1
+!s100 PbBZ^DcM_Mo8In?P8DB9C0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+ILITcI`O3`]SnhTHHfUjL43
+VDg1SIo80bB@j0V0VzS_@n1
+S1
+dD:/Term4/Pro_dsd/Digital_System_Design/Code
+w1719597986
+8D:\Term4\Pro_dsd\Digital_System_Design\Code\BalaBar.sv
+FD:\Term4\Pro_dsd\Digital_System_Design\Code\BalaBar.sv
+!i122 0
+L0 1 57
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1719598137.000000
+!s107 D:\Term4\Pro_dsd\Digital_System_Design\Code\BalaBar.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:\Term4\Pro_dsd\Digital_System_Design\Code\BalaBar.sv|
+!i113 1
+o-work work -sv
+tCvgOpt 0
+n@bala@bar
