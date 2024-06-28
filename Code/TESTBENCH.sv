@@ -32,41 +32,47 @@ module TESTBENCH;
     always #5 clk = ~clk; // clock
 
     initial begin
-        clk = 0;
-        rst = 1;
         buttons_in = 0;
         buttons_ex = 0;
+        clk = 0;
+        rst = 1;
+
         
-        #10 rst = 0;                      // t = 10
-        buttons_ex[0] = 1'b1;
-        #11 buttons_ex[0] = 1'b0;     // t = 20
-        #10 buttons_in[2] = 1'b1;     // t = 30     
-        #10 buttons_in[2] = 1'b0;     // t = 40
+        #10 rst = 0; 
+
+        #10 buttons_in[4] = 1'b1;         
+        #10 buttons_in[4] = 1'b0;    
         #100
-        buttons_ex[1] = 1'b1;         // t = 140
-        #10 buttons_ex[1] = 1'b0;     // t = 150
-        #10 buttons_ex[3] = 1'b1;     // t = 160
-        #10 buttons_ex[3] = 1'b0;     // t = 170
-        #10 buttons_ex[0] = 1'b1;     // t = 180
-        #10 buttons_ex[0] = 1'b0;     // t = 190
+       
+   
+        #10 buttons_ex[0] = 1'b1;     
+        #10 buttons_ex[0] = 1'b0;   
 
-        #60 buttons_in[2] = 1'b1;     // t = 250
-        #10 buttons_in[2] = 1'b0;     // t = 260
 
-        #210 buttons_in[0] = 1'b1;    // t = 470
-        #10 buttons_in[0] = 1'b0;     // t = 480
+        #10 buttons_ex[1] = 1'b1;     
+        #10 buttons_ex[1] = 1'b0;     
 
-        #130 buttons_in[4] = 1'b1;    // t = 610
-        #10 buttons_in[4] = 1'b0;     // t = 620
+        #60 buttons_in[3] = 1'b1;     
+        #10 buttons_in[3] = 1'b0;     
+
+        #310 buttons_in[2] = 1'b1;    
+        #10 buttons_in[2] = 1'b0;     
+
+        #130 buttons_in[3] = 1'b1;    
+        #10 buttons_in[3] = 1'b0;     
         
-        #20 buttons_ex[1] = 1'b1;     // t = 640
-        #10 buttons_ex[1] = 1'b0;     // t = 650
-        #1000;
+        #20 buttons_ex[1] = 1'b1;     
+        #10 buttons_ex[1] = 1'b0;     
+
+        #20 buttons_ex[4] = 1'b1;     
+        #10 buttons_ex[4] = 1'b0;   
+
+        #700;
         $stop();
     end
 
+
     initial begin
-    
     $dumpfile("BalaBar.vcd");
     $dumpvars;
     end

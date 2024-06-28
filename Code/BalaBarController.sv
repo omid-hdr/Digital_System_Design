@@ -30,7 +30,7 @@ module BalaBArController (
             val = queue.pop_front();
     endfunction
 
-    // always to the reg map for requests
+    // update requests
     always @(negedge clk or posedge rst) begin
         if (rst) begin
             new_target <= 1'b1;
