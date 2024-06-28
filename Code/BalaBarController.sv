@@ -1,4 +1,4 @@
-module elevator_controller (
+module BalaBArController (
     input clk,                          // Clock 
     input rst,                        // signal for reset
     input [4:0] buttons_ex,       // request from out
