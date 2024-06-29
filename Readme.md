@@ -1,22 +1,20 @@
 ![LOGO](https://github.com/omid-hdr/Digital_System_Design/blob/main/Document/image/Untitled.jpg)
 # Elevator simulation
-در این پروژه قصد داریم شبیه سازی آسانسور داشته باشیم.در واقع کنترلر آسانسور را بزنیم.شامل طبقه همکف یا همان 0 و 4 طبقه دیگر است.هر طبقه کلید دارد و درون آسانسور نیز میتوان به هر طبقه درخواست داد.
+در این پروژه قصد داریم شبیه سازی آسانسور داشته باشیم.در واقع کنترلر آسانسور را بزنیم.شامل طبقه همکف یا همان 0 و 4 طبقه دیگر است.هر طبقه کلید دارد و درون آسانسور نیز میتوان به هر طبقه درخواست داد. آسانسور باید به ترتیبی که درخواست داده اند به طبقات برود و اگر در مسیر خود مواجه درخواستی شد همانجا توقف کند.
 
 
 ## Tools
-In this section, you should mention the hardware or simulators utilized in your project.
 - ModelSim
 - Verilog
 - SystemVerylog
 
 
 ## Implementation Details
+![LOGO](https://github.com/omid-hdr/Digital_System_Design/blob/main/Document/image/Screenshot%202024-06-28%20234248.png)
 
-برای چنین پروژه ای از سه فایل استفاده کردم. اولین فایل همان بالابر است و آدرس و وضعیت آنرا اپدیت میکندد. دومی هم 
-یکی برای تست کردن که همان فایل TESTBENCH.v است.
+برای چنین پروژه ای از سه فایل استفاده کردم. اولین فایل همان بالابر است و آدرس و وضعیت آن را اپدیت میکندد. دومی هم فایل کنترلر است و اصل منطق حرکت و توقف و جهت حرکت آسانسور و همچنین پاسخگویی به درخواست ها را بر عهده دارد.
+سومی برای تست کردن که همان فایل TESTBENCH.v است.
 
-
-Feel free to use sub-topics for your projects. If your project consists of multiple parts (e.g. server, client, and embedded device), create a separate topic for each one.
 
 ## How to Run
 
