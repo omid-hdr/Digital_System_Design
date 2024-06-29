@@ -1,6 +1,4 @@
-
-![Logo](https://via.placeholder.com/600x150?text=Your+Logo+Here+600x150)
-
+https://github.com/omid-hdr/Digital_System_Design/blob/main/Document/image/Untitled.jpg
 
 # Elevator simulation
 در این پروژه قصد داریم شبیه سازی آسانسور داشته باشیم.در واقع کنترلر آسانسور را بزنیم.شامل طبقه همکف یا همان 0 و 4 طبقه دیگر است.هر طبقه کلید دارد و درون آسانسور نیز میتوان به هر طبقه درخواست داد.
