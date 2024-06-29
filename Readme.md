@@ -23,41 +23,18 @@ Feel free to use sub-topics for your projects. If your project consists of multi
 
 ## How to Run
 
-In this part, you should provide instructions on how to run your project. Also if your project requires any prerequisites, mention them. 
-
-#### Examples:
-#### Build Project
-Your text comes here
-```bash
-  build --platform=OvmfPkg/OvmfPkgX64.dsc --arch=X64 --buildtarget=RELEASE --tagname=GCC5
-```
-
-#### Run server
-Your text comes here
-```bash
-  pyhton server.py -p 8080
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `-p` | `int` | **Required**. Server port |
-
+just need to compile and simulate in modelsim
 
 
 ## Results
-In this section, you should present your results and provide an explanation for them.
+چنین است که میتوان یک سناریو را شبیه سازی کرد و سپس مورد بررسی قرار داد که چگونه عمل میکند.
 
 Using image is required.
 
 ## Related Links
-Some links related to your project come here.
- - [EDK II](https://github.com/tianocore/edk2)
- - [ESP32 Pinout](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
- - [Django Doc](https://docs.djangoproject.com/en/5.0/)
-
+ - https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/Ankit-kumar65/Elevator-Control-System-using-Verilog&ved=2ahUKEwiMkqb0qv-GAxUsg_0HHZjkBBgQFnoECBUQAQ&usg=AOvVaw07GmkHo4PIgQfwTOoeqVtP
+ - https://github.com/Engineer-Ayesha-Shafique/Generalized-Elevator-Control-System-Using-System-Verilog
 
 ## Authors
-Authors and their github link come here.
-- [@Author1](https://github.com/Sharif-University-ESRLab)
-- [@Author2](https://github.com/Sharif-University-ESRLab)
+- [Omid](https://github.com/omid-hdr)
 
